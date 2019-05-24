@@ -115,6 +115,8 @@ document.getElementById('btnRandom').onclick = () => {
 
 
 document.getElementById('btnInicia').onclick = () => {
+    document.getElementById("btnInicia").className = "buttonload";
+    document.getElementById("btnInicia").innerHTML = "<i class='fas fa-sync fa-spin'></i> Trabajando..."
     idInterval = window.setInterval(() => {
         startGame();
         drawMatrix();
@@ -122,5 +124,7 @@ document.getElementById('btnInicia').onclick = () => {
 }
 
 document.getElementById('btnPausa').onclick = () => {
+    document.getElementById("btnInicia").className = "btn btn-green";
+    document.getElementById("btnInicia").innerHTML = "Inicia"
     clearInterval(idInterval);
 }
